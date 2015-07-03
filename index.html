@@ -4,16 +4,131 @@
    <head>
       <meta charset="utf-8">
       <title>HTML5 Sprint</title>
+	   <link rel="stylesheet"  href="#" />
    </head>
 	
-   <body>	
-      <header role="banner">
-         <h1>A dive into front-end development</h1>
-		  <h2>HTML5</h2>
-		  	<p></p>
-      </header>
-      <footer>
-         <p>Created by <a href="https://github.com/bogolla/bogolla.github.io">Github</a></p>
+   <body>
+	   <header>
+		   <h1>Front-end Development</h1>
+	   </header>
+	   <nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="media.html">Media</a></li>
+				<li><a href="index.html">Forms</a></li>
+			</ul>
+	   </nav>
+	   <article>
+		   <h1>HTML5</h1>
+		   <p>HTML5 is a markup language used for structuring and presenting content for the World Wide Web. HTML5 aims have to improve the                   language with support for the latest multimedia while keeping it easily readable by humans and consistently understood by                       computers and devices (web browsers, parsers, etc.). It is intended to subsume HTML 4 and XHTML 1</p>  
+           <section>
+			   <h3>SYNTAX</h3>
+			   <p>HTHL5 Syntax can be summarised with the following points:
+               <ul>
+                   <li>White spaces - Not significant because browsers and validator don't require it to render pages.</li>
+                   <li>Not case sensitive - In HTML5 lowercase, uppercase... anything goes. </li>
+               </ul>
+               </p>
+		   </section>
+       <hr>
+       
+		   <section>
+			   <h3>RICH MEDIA</h3>                             
+			   <p>All it takes is a single line of code to make HTML5 video and audio tags work in all major browsers.</p>
+               
+               <h4>Audio</h4>
+               <p>Embedding an audio file in an HTML5 document is simple:</p>
+               <ul>
+                   <li>audio tags embed audio with native browser controls to web pages.</li>
+                   <li>Audio API - gives access to methods such as play and pause and properties such as volume .</li>
+               </ul>
+               <h4>Using Default Audio Controls</h4>
+               <audio controls>
+                   <source src="media/audio/trance_intro.mp3">
+                   Your browser does not support the audio element.
+               </audio>
+               
+               <h4>Using inline event elements and event handlers</h4>
+               <audio id="player" src="media/audio/trance_intro.mp3">
+                </audio>
+                <div>
+                    <button onclick="document.getElementById('player').play()"> Play </button>
+                    <button onclick="document.getElementById('player').pause()"> Pause </button>
+                    <button onclick="document.getElementById('player').volume+= 0.1">Volume Up</button>
+                    <button onclick="document.getElementById('player').volume-= 0.1">Volume Down</button>
+                </div>
+               
+               <h4>Video</h4>
+               <p>Adding video to a page is equally simple:</p>
+               <ul>
+                   <li>The audio tag has native default controls.</li>
+                   <li>The location of the video file can be specified by either using the src attribute on the video element or by using source elements nested within the opening and closing video tags.</li>
+                   <li>Images or posters can be used as placeholders for the videos</li>
+                   <video src="media/video/NoDegree.mp4" controls width="360" height="240">
+                   </video>
+               </ul>
+		   </section>
+       <hr>
+       <section>
+           <h3>WEB FORMS</h3>
+           <p>HTML5 has the folowing features for laying out forms on the web:
+           <ul>
+               <li>Placeholders - The placeholder attribute is used for placeholder texts within form fields.</li>
+               <li>Autofocus - HTML5 attribute that automatically focus one particular form field when a document loads. </li>
+               <li>Required - This allows browsers to prevent form submissions if required fields haven’t been filled out. </li>
+               <li>Input types - email, search, email, url, tel, range, date, color</li>
+           </ul>
+           
+           <h3>Form Examples</h3>
+           <form>
+               <fieldset>
+                   <legend> Customer Details </legend>
+               <p><label for="names">Customer name: </label><input id="names" name="name" type="text" placeholder="name"></p>
+                <p><label>Telephone: <input type=tel placeholder=" phone" required></label>  (required)</p>
+                <p><label>E-mail address: <input type=email placeholder="email" autofocus></label>  (autofocus)</p>
+                   <p>
+                       <label for="Job Rank"></label>
+                       <input type="text" name="position" id="positionld" list="positions">
+                       <datalist id="positions">
+                           <option value="CTO">
+                           <option value="Intern">
+                            <option value="Accountant">
+                           <option value="HR Manager">
+                        </datalist>
+                    </p>
+                   <p>
+                       <label for="amount">Hours spent at work:    </label>
+                       <input id="amount" name="amount" type="range" min="9" max="18">
+                   </p>
+                   <p>
+                       <label for="dtstart">Employment Start date: </label>
+                       <input id="dtstart" name="dtstart" type="date">
+                   </p>
+                   <p>
+                       <label for="bgcolor">Favorite Color:   </label>
+                       <input id="bgcolor" name="bgcolor" type="color">
+                   </p>
+                    <p><button>Submit Response</button></p>
+             </fieldset>             
+            </form>
+           </p>
+       </section>
+    <hr>
+    <section>
+        <h3><mark>NEW ELEMENTS</mark></h3>
+			   <p>:
+               <ul>
+                   <li></li>
+                   <li></li>
+               </ul>
+               </p>
+    </section>
+	   </article>
+	   <aside>
+	   </aside>
+	   
+	   <footer>
+         <p>Created by <a href="https://github.com/bogolla/bogolla.github.io">bogolla</a></p>
       </footer>
    </body>
    
