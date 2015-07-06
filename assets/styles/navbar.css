@@ -1,0 +1,45 @@
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+  height: 35px;
+  text-align: center;
+  padding-top: 15px;
+  z-index: 9999;
+  background-color: #c53a21;
+}
+
+.fixed-nav a {
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.fixed-nav a:hover {
+  color: black;
+}
+
+.menu-items {
+  display: inline-block;
+}
+
+.menu-items li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Using the keyword  none to remove any decorations e.g underlining menu elements */
+.menu-items a {
+  text-decoration: none;
+}
+
+/* The element after the top fixed navbar given margin so 
+   that it is not covered by the navbar 
+   */
+.content {
+  margin-top: 20px;
+}

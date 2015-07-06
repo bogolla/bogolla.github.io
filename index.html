@@ -1,140 +1,173 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Frontend Sprint</title>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/navbar.css" />
+  </head>
+  <body>
 
-   <head>
-      <meta charset="utf-8">
-      <title>HTML5 Sprint</title>
-	   <link rel="stylesheet"  href="#" />
-   </head>
-	
-   <body>
-	   <header>
-		   <h1>Front-end Development</h1>
-	   </header>
-	   <nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="media.html">Media</a></li>
-				<li><a href="index.html">Forms</a></li>
-			</ul>
-	   </nav>
-	   <article>
-		   <h2>HTML5</h2>
-		   <p>HTML5 is a markup language used for structuring and presenting content for the World Wide Web. HTML5 aims have to improve the                   language with support for the latest multimedia while keeping it easily readable by humans and consistently understood by                       computers and devices (web browsers, parsers, etc.). It is intended to subsume HTML 4 and XHTML 1</p>  
-           <section>
-			   <h3>SYNTAX</h3>
-               <p>HTHL5 Syntax can be summarised with the following points: </p>
-               <ul>
-                   <li>White spaces - Not significant because browsers and validator don't require it to render pages.</li>
-                   <li>Not case sensitive - In HTML5 lowercase, uppercase... anything goes. </li>
-               </ul>               
-		   </section>
-       <hr>
-       
-		   <section>
-			   <h3>RICH MEDIA</h3>                             
-			   <p>All it takes is a single line of code to make HTML5 video and audio tags work in all major browsers.</p>
-               
-               <h4>Audio</h4>
-               <p>Embedding an audio file in an HTML5 document is simple:</p>
-               <ul>
-                   <li>audio tags embed audio with native browser controls to web pages.</li>
-                   <li>Audio API - gives access to methods such as play and pause and properties such as volume .</li>
-               </ul>
-               <h4>Using Default Audio Controls</h4>
-               <audio controls>
-                   <source src="media/audio/trance_intro.mp3">
-                   Your browser does not support the audio element.
-               </audio>
-               
-               <h4>Using inline event elements and event handlers</h4>
-               <audio id="player" src="media/audio/trance_intro.mp3">
-                </audio>
-                <div>
-                    <button onclick="document.getElementById('player').play()"> Play </button>
-                    <button onclick="document.getElementById('player').pause()"> Pause </button>
-                    <button onclick="document.getElementById('player').volume+= 0.1">Volume Up</button>
-                    <button onclick="document.getElementById('player').volume-= 0.1">Volume Down</button>
-                </div>
-               
-               <h4>Video</h4>
-               <p>Adding video to a page is equally simple:</p>
-               <ul>
-                   <li>The audio tag has native default controls.</li>
-                   <li>The location of the video file can be specified by either using the src attribute on the video element or by using source elements nested within the opening and closing video tags.</li>
-                   <li>Images or posters can be used as placeholders for the videos</li>
-                   </ul>
-               
-                   <video src="media/video/NoDegree.mp4" controls width="360" height="240">
-                   </video>               
-		   </section>
-       <hr>
-       <section>
-           <h3>WEB FORMS</h3>
-           <p>HTML5 has the folowing features for laying out forms on the web:
-           <ul>
-               <li>Placeholders - The placeholder attribute is used for placeholder texts within form fields.</li>
-               <li>Autofocus - HTML5 attribute that automatically focus one particular form field when a document loads. </li>
-               <li>Required - This allows browsers to prevent form submissions if required fields haven’t been filled out. </li>
-               <li>Input types - email, search, email, url, tel, range, date, color</li>
-           </ul>
-           
-           <h3>Form Examples</h3>
-           <form>
-               <fieldset>
-                   <legend> Customer Details </legend>
-               <p><label for="names">Customer name: </label><input id="names" name="name" type="text" placeholder="name"></p>
-                <p><label>Telephone: <input type=tel placeholder=" phone" required></label>  (required)</p>
-                <p><label>E-mail address: <input type=email placeholder="email" autofocus></label>  (autofocus)</p>
-                       <label for="positionld">Job Rank:  </label>
-                       <input type="text" name="position" id="positionld" list="positions">
-                       <datalist id="positions">
-                           <option value="CTO">
-                           <option value="Intern">
-                            <option value="Accountant">
-                           <option value="HR Manager">
-                        </datalist>
-                    </p>
-                   <p>
-                       <label for="amount">Hours spent at work:    </label>
-                       <input id="amount" name="amount" type="range" min="9" max="18">
-                   </p>
-                   <p>
-                       <label for="dtstart">Employment Start date: </label>
-                       <input id="dtstart" name="dtstart" type="date">
-                   </p>
-                   <p>
-                       <label for="bgcolor">Favorite Color:   </label>
-                       <input id="bgcolor" name="bgcolor" type="color">
-                   </p>
-                    <p><button>Submit Response</button></p>
-             </fieldset>             
-            </form>
-       </section>
-    <hr>
+  <!--Marking up the top navigation-->
+  <nav class="fixed-nav">
+    <ul class="menu-items">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Media</a></li>
+      <li><a href="#">Forms</a></li>
+      <li><a href="#">Cheat Sheet</a></li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <div class="description">
+      <h1>Frontend Sprint</h1>
+      <p class="summary">A deep dive into frontend development. Studying website development languages - HTML5, CSS3 and JAVASCRIPT.</p>
+      <a class="button" href="https://github.com/bogolla/bogolla.github.io">View Source on GitHub</a>
+    </div>
+  </section>
+
+  <div class="related-articles">
     <section>
-        <h3>SEMANTICS</h3>
-			   <p>HTML provides a handy escape clause that allows web designers to add more semantic value to elements: the class attribute.
-               <ul>
-                   <li>Microformats: Are a set of conventions which are agreed upon
-by a community. These formats use the class attribute to plug
-some of the more glaring holes in HTML: hCard for contact
-details, hCalendar for events, hAtom for news stories.</li>
-                   <li>Meter element:  <meter low="-273" high="100" optimum="21" value="25">
-                       It's quite warm for this time of year.
-                       </meter></li>
-                   <li>Progress element<progress max="100" value="60"></progress></li>
-                   <li>Your profile is <progress>60</progress> complete.</li>
-               </ul>
-               </p>
+      <header>
+        <h1>HTML5</h1>
+      </header>
+      <p>HTML5 is a markup language used for structuring and presenting content for the World Wide Web. HTML5 aims to improve the language with support for the latest multimedia while keeping it easily readable by humans and consistently understood by computers and devices (web browsers, parsers, etc.). It is intended to subsume HTML 4 and XHTML 1</p>
     </section>
-	   </article>
-	   <aside>
-	   </aside>
-	   
-	   <footer>
-         <p>Created by <a href="https://github.com/bogolla/bogolla.github.io">bogolla</a></p>
-      </footer>
-   </body>
-   
+
+    <section>
+      <header>
+        <h2><a href="#">SYNTAX</a></h2>          
+      </header>
+      <p>HTHL5 Syntax can be summarised with the following points:</p>
+      <ul>
+        <li>White spaces - Not significant because browsers and validator don't require white spaces to render pages.</li>
+        <li>Not case sensitive - In HTML5 lowercase, uppercase... anything goes.</li>
+      </ul>
+    </section>
+
+      <section>
+        <header>
+          <h2><a href="#">RICH MEDIA</a></h2>
+        </header>
+        <p>All it takes is a single line of code to make HTML5 video and audio tags work in all major browsers.</p>
+
+        <article>
+          <header>
+            <h3>Audio</h3>
+          </header>
+          <p>Embedding an audio file in an HTML5 document is simple:</p>
+          <ul>
+            <li>audio tags embed audio with native browser controls to web pages.</li>
+            <li>Audio API - gives access to methods such as play and pause and properties such as volume .</li>
+          </ul>
+          <h4>Using Default Audio Controls</h4>
+          <audio controls>
+            <source src="assets/media/trance_intro.mp3">
+            Your browser does not support the audio element.
+          </audio>
+           
+          <h4>Using inline event elements and event handlers</h4>
+          <audio id="player" src="assets/media/trance_intro.mp3">
+          </audio>
+            <div>
+                <button onclick="document.getElementById('player').play()"> Play </button>
+                <button onclick="document.getElementById('player').pause()"> Pause </button>
+                <button onclick="document.getElementById('player').volume+= 0.1">Volume Up</button>
+                <button onclick="document.getElementById('player').volume-= 0.1">Volume Down</button>
+            </div>
+        </article>  
+
+        <article>
+          <header>
+            <h3>Video</h3>
+          </header>   
+          <p>Adding video to a page is equally simple:</p>
+          <ul>
+            <li>The audio tag has native default controls.</li>
+            <li>The location of the video file can be specified by either using the src attribute on the video element or by using source elements nested within the opening and closing video tags.</li>
+            <li>Images or posters can be used as placeholders for the videos</li>
+            </ul>
+           
+            <video src="assets/media/NoDegree.mp4" controls width="600" height="480">
+            </video> 
+        </article>
+      </section>
+      
+      <section>
+        
+      </section>
+        <header>
+          <header>
+            <h2><a href="#"> WEB FORMS</a></h2>
+        </header>
+        <p>HTML5 has the folowing features for laying out forms on the web: </p>
+         <ul>
+            <li>Placeholders - The placeholder attribute is used for placeholder texts within form fields.</li>
+            <li>Autofocus - HTML5 attribute that automatically focus one particular form field when a document loads. </li>
+            <li>Required - This allows browsers to prevent form submissions if required fields haven’t been filled out. </li>
+            <li>Input types - email, search, email, url, tel, range, date, color</li>
+         </ul>
+         
+         <h3>Form Examples</h3>
+         <form>
+            <fieldset>
+              <legend> Customer Details </legend>
+                <p>
+                  <label for="name">Customer name: </label>
+                  <input name="name" id="names" type="text" placeholder="name" />
+                  </p>
+                  <p>
+                  <label for="tel">Telephone: </label>
+                  <input name="tel" id="tel" type="tel" placeholder=" phone" required />
+                </p>
+                <p>
+                  <label for="email">E-mail address: </label>
+                  <input name="email" id="email" type="email" placeholder=" email" autofocus />
+                </p>
+                  <label for="position">Job Rank:  </label>
+                  <input name="position" id="position" type="text" list="positions" />
+                  <datalist id="positions">
+                     <option value="CTO">
+                     <option value="Intern">
+                      <option value="Accountant">
+                     <option value="HR Manager">
+                  </datalist>
+                 </p>
+                 <p>
+                     <label for="amount">Hours spent at work:    </label>
+                     <input id="amount" name="amount" type="range" min="9" max="18">
+                 </p>
+                 <p>
+                     <label for="dtstart">Employment Start date: </label>
+                     <input id="dtstart" name="dtstart" type="date">
+                 </p>
+                 <p>
+                     <label for="bgcolor">Favorite Color:   </label>
+                     <input id="bgcolor" name="bgcolor" type="color">
+                 </p>
+                  <p><button>Submit Response</button></p>
+           </fieldset>             
+          </form>
+      </section>
+
+      <section>
+        <header>
+          <h2><a href="#">SEMANTICS</a></h2>       
+            </header>        
+            <p>HTML provides a handy escape clause that allows web designers to add more semantic value to elements: the class attribute.
+            <ul>
+              <li>Microformats: Are a set of conventions which are agreed upon
+      by a community. These formats use the class attribute to plug
+      some of the more glaring holes in HTML: hCard for contact
+      details, hCalendar for events, hAtom for news stories.</li>
+              <li>Meter element:  <meter low="-273" high="100" optimum="21" value="25">
+                             It's quite warm for this time of year.
+                             </meter></li>
+              <li>Progress element<progress max="100" value="60"></progress></li>
+              <li>Your profile is <progress>60</progress> complete.</li>
+            </ul>
+            </p>        
+      </section>
+  </div>
+</body>
 </html>
