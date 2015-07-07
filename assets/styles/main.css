@@ -15,7 +15,10 @@ header, footer, aside, nav, article {
     display: block;
 }
 
-/*Basic Styling of the body and other components*/
+/*
+    Basic Styling of the body and other components
+    Body defining default font-family - Ubuntu and fallback is any sans-serif font family
+    */
 body {
   padding: 0;
   margin: 0;
@@ -66,6 +69,7 @@ p {
     Pseudo Class Selectors
     ======================
     Link pseudo classes
+    Keyword none used to avoid default decorators
 */
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;

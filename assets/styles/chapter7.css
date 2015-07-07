@@ -6,8 +6,18 @@ p {
   border-width: 5px;
 }
 
+/* Styling with a thin margin */
 p.thin{
   width: 20%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling with a thin margin and making it scrollable*/
+p.scroll{
+  overflow: scroll;
+  width: 20%;
+  height: 14em;
   margin: 0;
   padding: 0;
 }
@@ -27,6 +37,18 @@ p.thin{
 div {
   padding: 20px; 
   background: silver;
+}
+
+/* Defing a background image that is not repeated*/
+div.norepeat {
+  padding: 20px; 
+  background: silver url(../media/building.jpg) no-repeat center  center fixed;
+}
+
+/* Defing a background image that is repeated*/
+div.repeat {
+  padding: 20px; 
+  background: silver url(../media/repeate.jpg) repeat-x center  center fixed;
 }
 
 .fixed-nav {

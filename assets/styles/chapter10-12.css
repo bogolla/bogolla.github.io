@@ -1,0 +1,91 @@
+body {
+	background: black;
+	color: silver;	
+}
+
+div#header {
+	position: fixed;
+	top: 0; 
+	bottom: 90%; 
+	left: 15%; 
+	right: 0;
+	background: gray;
+	margin-bottom: 2px;
+	color: yellow;
+}
+
+div#sidebar {
+	position: fixed; 
+	top: 0; 
+	bottom: 0; 
+	left: 0; 
+	right: 85%;
+	background: silver;
+	margin-right: 2px;
+	color: maroon;
+}
+
+div#main {
+	position: absolute; 
+	top: 20%; 
+	bottom: 0; 
+	left: 15%; 
+	right: 0%;
+	overflow: scroll; 
+	background: white;
+	color: black;
+}
+
+div#footer {
+	position: fixed; 
+	bottom: 0; 
+	width: 100%; 
+	height: auto;
+	background: red;
+}
+
+table {
+	table-layout: auto; 
+	width: 20em;
+	border-collapse: separate; 
+	border-spacing: 3px;
+}
+
+
+table.second {
+	table-layout: fixed; 
+	width: 400px;
+	border-collapse: collapse;
+}
+
+col#c1a {
+	width: 200px;
+}
+#r1c2a {
+	width: 75px;
+}
+#r2c3a {
+	width: 500px;
+}
+
+
+td {
+	border: 1px solid; 
+	background: silver;
+	padding: 0;
+}
+
+div {
+	border: 1px dashed gray; 
+	background: white;
+}
+#r1c1 {
+	vertical-align: top; 
+	height: 10em;
+}
+#r1c2 {
+	vertical-align: middle;
+}
+#r1c3 {
+	vertical-align: bottom;
+}
