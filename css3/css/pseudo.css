@@ -1,0 +1,7 @@
+p:nth-child(2n) { 
+	font-weight: bolder ; 
+}
+
+/*p:nth-of-type(2n) { 
+	font-weight: bolder; 
+}*/

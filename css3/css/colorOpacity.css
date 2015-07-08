@@ -1,0 +1,106 @@
+.box { 
+	background-image: url('../img/monkey.png'); 
+}
+.text { 
+	background-color: white; 
+}
+.opacity { 
+	opacity: 0.5; 
+}
+.rgba { 
+	background-color: rgba(255,255,255,0.5); 
+}
+
+.shadow .text { box-shadow: 10px 10px 4px rgba(0,0,0,0.7); }
+.border .text { border: 10px solid rgba(0,0,0,0.5); }
+.text-semi p { color: rgba(0,0,0,0.6); }
+.text-shadow p { text-shadow: 5px 5px 1px rgba(0,0,0,0.6); }
+
+h2 { 
+	color: black; 
+	height: 2em;
+	border: solid;
+}
+
+.ccolor {
+	background-color: black;
+	color: white;
+}
+
+h2 abbr { 
+	border-bottom: 6px double currentColor; 
+}
+
+/* 
+	======================
+	Linear Gradients
+	======================
+	Syntax: background: linear-gradient(direction, color-stop1, color-stop2, ...);
+			background: radial-gradient(shape size at position, start-color, ..., last-color);
+ */
+
+ #grad1-tb {
+    height: 200px;
+    background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, blue); /* Standard syntax (must be last) */
+}
+
+ #grad1-d {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, red , blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, red, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, red, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, red , blue); /* Standard syntax (must be last) */
+}
+
+ #grad1-lr {
+    height: 200px;
+    background: -webkit-linear-gradient(left, red, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, red, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, red, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(right, red, blue); /* Standard syntax (must be last) */
+}
+
+#grad1-stop {
+    height: 200px;
+    background: -webkit-linear-gradient(red, green, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, green, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, green, blue); /* Standard syntax (must be last) */
+}
+
+#grad1-transparent {
+    height: 200px;
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+}
+
+#grad1-repeate {
+    height: 200px;
+    background: -webkit-repeating-linear-gradient(red, yellow 10%, green 20%); /* For Safari 5.1 to 6.0 */
+    background: -o-repeating-linear-gradient(red, yellow 10%, green 20%); /* For Opera 11.1 to 12.0 */
+    background: -moz-repeating-linear-gradient(red, yellow 10%, green 20%); /* For Firefox 3.6 to 15 */
+    background: repeating-linear-gradient(red, yellow 10%, green 20%); /* Standard syntax (must be last) */
+}
+
+#grad1-radial {
+    height: 150px;
+    width: 200px;
+    background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(red, green, blue); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(red, green, blue); /* Standard syntax (must be last) */
+}
+
+#grad1-radial-repeat {
+    height: 150px;
+    width: 200px;
+    background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%); /* For Safari 5.1 to 6.0 */
+    background: -o-repeating-radial-gradient(red, yellow 10%, green 15%); /* For Opera 11.6 to 12.0 */
+    background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%); /* For Firefox 3.6 to 15 */
+    background: repeating-radial-gradient(red, yellow 10%, green 15%); /* Standard syntax (must be last) */
+}

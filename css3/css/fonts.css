@@ -1,0 +1,100 @@
+/* 
+	The @font-face Rule
+	=======================
+	Structure
+	=======================
+	@font-face {
+		font-family: FontName; --- Defines the font name
+		src: wlocal('fontname'), xurl('/path/filename.otf') yformat('opentype');
+		---
+		wlocal checks for the presence of the font in the local system
+		xurl defines the location of the defined fonts. Executed if fonts are not available in locally
+		yformat defines the file format to be used i.e woff, eot, opentype
+	}
+
+	Defining multiple fonts 
+
+*/
+@font-face {
+	font-family: 'Gentium Basic';
+	src: url('vGenBasR.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Gentium Basic';
+	font-style: italic;
+	src: url('yGenBasI.woff') format('woff');
+}
+
+h1 {
+	font-family: 'Gentium Basic', sans-serif; 
+}
+
+
+/* 
+	====================
+	Bullet Proof Syntax
+	====================
+	To solve compatibility issues and standadize the behaviour of wlocal accross all browsers
+	IE9 compatibility - src: url('GenBasR.eot?#iefix') format('embedded-opentype'), 
+	Majority of browsers - url('GenBkBasR.woff') format('woff'),
+	Older Browser - url('GenBkBasR.ttf') format('truetype');
+*/
+@font-face {
+	font-family: 'Gentium Basic';
+	src: url('GenBkBasR.eot');  /* For IE8 and below */
+	src: url('GenBasR.eot?#iefix') format('embedded-opentype'), 
+	url('GenBkBasR.woff') format('woff'),
+	url('GenBkBasR.ttf') format('truetype');
+}
+
+/* Usage Example */
+@font-face {
+	font-family: 'CartoonistHand';
+	src: url('CartoonistHand.woff') format('woff');
+}
+@font-face {
+	font-family: 'CartoonistHand';
+	font-style: italic;
+	src: url('CartoonistHand-Italic.woff') format('woff');
+}
+@font-face {
+	font-family: 'CartoonistHand';
+	font-weight: bold;
+	src: url('CartoonistHand-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'ChunkFiveRegular';
+	src: url('Chunkfive.woff') format('woff');
+}
+@font-face {
+	font-family: 'AirstreamRegular';
+	src: url('Airstream.woff') format('woff');
+}
+.font-face h1 { 
+	font-family: ChunkFiveRegular, sans-serif; 
+}
+.font-face h2 { 
+	font-family: AirstreamRegular, cursive; 
+}
+.font-face p { 
+	font-family: CartoonistHand, sans-serif; 
+}
+
+
+/* 
+	================
+	Font Properties
+	================ 
+*/
+/* Font size adjust */
+p { font-size-adjust: 0.5; }
+h1.adjusted { font-size-adjust: 0.517; }
+h1.impact { font-family: Impact, serif; }
+
+/* Font stretch */
+h3 { font-family: 'Arial', sans-serif; }
+h3.narrow { font-stretch: condensed; }
+
+/* Font Kerning */
+p { font-kerning: normal; }

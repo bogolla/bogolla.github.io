@@ -1,0 +1,57 @@
+/* Simple Attribute Selector */
+a[rel] { 
+	color: red; 
+}
+
+/* Exact Attribute Value Selector */
+a[rel='friend'] { 
+	color: green; 
+}
+
+/* Partial Attribute Value Selector */
+a[rel~='friend'] { 
+	color: red; 
+}
+
+/* Language Attribute Selector */
+a[lang|='es'] { 
+	color: red; 
+}
+
+/* Beginning Selector */
+a[title^='image'] {
+	color: red;
+}
+
+/* Ending Selector */
+a[title$='library'] {
+	color: red;
+}
+
+/* Arbitrary Selector */
+a[title*='library'] {
+	color: red;
+}
+
+/*
+	Looks for a elements that have an href attribute 
+	beginning with http:// , ending with .pdf , 
+	and with /folder2/ contained within it.
+*/
+a[href^='http://'][href*='/folder2/'][href$='.pdf'] {
+	...
+}
+
+/* Adjacent Sibling Combinator */
+h2 + p { 
+	font-weight: bolder; 
+} 
+
+/* General Sibling Combinator */
+h2 ~ p { 
+	font-style: italic; 
+} 
+
+.cover{
+	border: 1px;
+}
