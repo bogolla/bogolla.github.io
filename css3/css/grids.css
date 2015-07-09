@@ -1,0 +1,64 @@
+*{box-sizing: border-box;}
+
+/*
+	min-width - for responsive web for breakpoints when using media queries
+	max-width - for larger devicces to avoid unexpected breakpoints
+*/
+body {
+	width: 100%;
+	max-width: 1200px;
+	min-width: 320px;
+	margin: 0 auto;
+}	
+
+.row {
+	padding: 20px;
+	width: 100%;
+	float: left;
+}
+
+.col {
+	background: #e74c3c;
+	min-height: 60px;
+	/* Defining the gutters below - aread between the different columns*/
+	margin-left: 2.4%; 
+	margin-right: 2.4%;
+	display: inline-block;
+	float: left;
+}
+
+/*
+	Define Pseudo classes for first-child(first column) and last child(last column) 
+	of the parent elements
+*/
+.col:first-child {
+	margin-left: 0px;
+}
+
+.col:last-child {
+	margin-right: 0px;
+}
+
+/* 
+	Calculated widths that take into account the gutters. 
+	Should add to 100% when col numbers equal 12
+*/
+.col.one {width: 3.93%;}
+.col.two {width: 12.66%;}
+.col.three {width: 21.4%;}
+.col.four {width: 30.13%;}
+.col.five {width: 38.867%;}
+.col.six {width: 47.6%;}
+.col.seven {width: 56.333%;}
+.col.eight {width: 65.07%;}
+.col.nine {width: 73.8%;}
+.col.ten {width: 82.533%;}
+.col.eleven {width: 91.27%;}
+.col.twelve {width: 100%;}
+
+@media (max-width: 768px){
+	.col {
+		width: 100% !important;
+		margin: 5px 0px 5px 0px;
+	}
+}

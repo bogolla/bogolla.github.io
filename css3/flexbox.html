@@ -3,13 +3,71 @@
 <head>
 	<meta charset="utf-8">
 	<title>Frontend Sprint</title>
-    <link rel="stylesheet" href="assets/styles/main.css" />
-    <link rel="stylesheet" href="assets/styles/navbar.css" />
+    <link rel="stylesheet" href="css/flexbox.css" />
 </head>
+<header>
+    Flexbox
+</header>
 <body>
-	<div id="container">
-		<div id="a">...</div>
-		<div id="b">...</div>
-	</div>
+
+<div="">
+<div class="paddingBlock">
+  <h1>Equal Height Coluns</h1>
+  <p>Add display:flex to the parent</p>
+  <div class="equalHWrap equalWrap">
+    <div class="equalH equal">sometext <br> other text</div>
+    <div class="equalH equal">sometext</div>
+    <div class="equalH equal">sometext</div>
+  </div>
+</div>            
+
+<div class="paddingBlock">
+  <h1>Equal Height + width columns</h1>
+  <p>Add display:flex to the parent and flex:1 to the boxes</p>
+  <div class="equalHWrap equalWrap">
+    <div class="equalHW equal">sometext <br> other text</div>
+    <div class="equalHW equal">sometext</div>
+    <div class="equalHW equal">sometext</div>
+  </div>
+</div>            
+
+<div class="paddingBlock">
+  <h1>Equal height + width columns with margins</h1>
+  <p>Add display:flex, justify-content: space-between; to the parent and give a width to the boxes that totals to less than 100%. E.g. These boxes have a width of 32% each. The remaining width of 4% (i.e. 32 x 3 = 96%) will be used to create the space between the boxes and simulate margins. No need to remove margins on the first and last child!</p>
+  <div class="equalHMWrap equalWrap">
+    <div class="equalHM equal">sometext <br> other text</div>
+    <div class="equalHM equal">sometext</div>
+    <div class="equalHM equal">sometext</div>
+  </div>
+</div>
+
+<div class="paddingBlock">
+  <h1>Equal height columns with margins in multipe rows</h1>
+  <p>Building on the above example, just give bottom margins to the boxes. Add a flex-wrap: wrap to the parent, so that boxes go to the next line when they run out of space in a 'row'.</p>
+  <div class="equalHMRWrap equalWrap">
+    <div class="equalHMR equal">sometext</div>
+    <div class="equalHMR equal">sometext</div>
+    <div class="equalHMR equal">sometext</div>
+    <div class="equalHMR equal">sometext <br> sometext </div>
+    <div class="equalHMR equal">sometext</div>
+    <div class="equalHMR equal">sometext</div>
+  </div>
+</div>
+
+<div class="paddingBlock">
+  <h1>Equal height columns with margins in multipe rows and variabe number of boxees</h1>
+  <p>Add display:flex, flex-wrap: wrap to the parent and give a width to the boxes. Give margins to the boxes and remove the left and right margins of the first and last box in each 'row' using the nth-of-type selector. Unlike the previous example, justify-content: space-between on the parent does not work for an uneven number of boxes, because if there are five boxes in all, the third and fifth will align to the left and right of the perceived 'row'.</p>
+  <div class="equalHMVWrap equalWrap">
+    <div class="equalHMV equal">sometext <br> sometext</div>
+    <div class="equalHMV equal">sometext</div>
+    <div class="equalHMV equal">sometext</div>
+    <div class="equalHMV equal">sometext <br> sometext </div>
+    <div class="equalHMV equal">sometext</div>
+  </div>
+</div>
+
 </body>
+<footer>
+	<a href="#">bogolla</a>
+</footer>
 </html>
