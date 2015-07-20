@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular js</title>
+    <script
+        src="../lib/angular-1.4.2/angular.js"></script>
+    <script
+        src="../lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <script src="directives.js"></script>
+    <link rel="stylesheet"
+          href="../lib/bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/hello.css">
+</head>
+<body>
+<div class="container">
+    <header class="page-header">
+        <h1>Built in Directives</h1>
+    </header>
+    <div ng-controller="diasbledCtrl">
+        <header>
+            <h2>1. ng-disabled</h2>
+        </header>
+        <form name="myForm">
+            <input name="myText" type="text" name="test" ng-model="mytext" required />
+            <button class="bg-primary" ng-disabled="myForm.$invalid">Save</button>
+        </form>
+    </div>
+    <div ng-controller="readonlyCtrl">
+        <header>
+            <h2>2. ng-readonly</h2>
+        </header>
+        <p>First Name:
+            <input ng-model="first" ng-readonly="true"/>
+        </p>
+        <p>Last Name:
+            <input ng-model="second" ng-readonly="truefalse"/>
+        </p>
+    </div>
+    <div ng-controller="checkedCtrl">
+        <header>
+            <h2>3. ng-checked</h2>
+        </header>
+        <label><input type="checkbox" name="test1"
+                      ng-model="testModel.item1" /> Manchester
+            United</label><br />
+        <label><input type="checkbox" name="test2"
+                      ng-model="testModel.item2" /> Real Madrid</label><br />
+        <label><input type="checkbox" name="test3"
+                      ng-model="testModel.item3" /> Bayern Munich</label><br />
+        <input type="button" ng-click="submit()" value="Submit" />
+        <pre>{{testModel|json}}</pre>
+    </div>
+    <div ng-controller="selectedCtrl">
+        <header>
+            <h2>4. ng-selected</h2>
+        </header>
+        <select
+            ng-model="myOption"
+            ng-options="value.id as value.label group by value.group for value in myOptions">
+            <option>--</option>
+        </select>
+        <div>
+            ng-model value: {{myOption}}
+        </div>
+    </div>
+    <div ng-controller="parentController">
+        <header>
+            <h2>5. Directives with child scopes</h2>
+        </header>
+        {{ myTestModel.shout }}
+        <button ng-click="shout()">Accessing the child contriller</button>
+        <div ng-controller="childController">
+            {{ myTestModel.shout }}
+            <button ng-click="childAction()">Accessing the parent</button>
+        </div>
+    </div>
+    <!--<div>-->
+        <!--<header>-->
+            <!--<h2>6. ng-if</h2>-->
+        <!--</header>-->
+        <!--<div ng-if="2 + 2 === 5">-->
+            <!--Won't see this DOM node, not even in the source code-->
+        <!--</div>-->
+        <!--<div ng-if="2 + 2 === 4">-->
+            <!--Hi, I do exist-->
+        <!--</div>-->
+    <!--</div>-->
+    <div>
+        <header>
+            <h2>7. ng-repeat</h2>
+        </header>
+        <div class="rangi">
+        <ul ng-controller="repeatController">
+            <li ng-repeat="student in students" ng-class="{even: !$even, odd: !$odd}">
+                {{student.name}} lives in {{student.course}}
+            </li>
+        </ul>
+        </div>
+    </div>
+
+    <!-- Should be used at some point -->
+    <!--<div ng-controller="changeController">-->
+        <!--<header>-->
+            <!--<h2>8. ng-change</h2>-->
+        <!--</header>-->
+        <!--<input type="text"-->
+               <!--ng-model="someCondition.x"-->
+               <!--ng-change="whenToChange()" />-->
+
+        <!--<button class="bg-primary">{{ someCondition.output }}</button>-->
+    <!--</div>-->
+    <div>
+        <header>
+            <h2>8. ng-form</h2>
+        </header>
+        <form name="signup_form"
+              ng-controller="formController"
+              ng-submit="submitForm()" novalidate>
+            <div ng-repeat="field in fields"
+                 ng-form="signup_form_input">
+                <input type="text"
+                       name="dynamic_input"
+                       ng-required="field.isRequired"
+                       ng-model="field.name"
+                       placeholder="{{field.placeholder}}" />
+                <div
+                    ng-show="signup_form_input.dynamic_input.$dirty &&
+signup_form_input.dynamic_input.$invalid">
+<span class="error"
+      ng-show="signup_form_input.dynamic_input.$error.required">
+The field is required.
+</span>
+                </div>
+            </div>
+            <button type="submit"
+                    ng-disabled="signup_form.$invalid">
+                Submit All
+            </button>
+        </form>
+    </div>
+
+    <!--<div>-->
+        <!--ng-class-->
+    <!--</div>-->
+
+</div>
+
+</body>
+</html>

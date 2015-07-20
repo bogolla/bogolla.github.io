@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Angular js</title>
+    <script
+        src="../lib/angular-1.4.2/angular.js"></script>
+    <script
+        src="../lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <script src="myform.js"></script>
+    <link rel="stylesheet"
+          href="../lib/bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="page-header">
+        <h1>Form Validation in Angular</h1>
+    </header>
+    <div ng-app="myApp" ng-controller="myFormController">
+        <form name="reg_form" novalidate class="form-horizontal" ng-submit="regForm()">
+            <div class="form-group">
+                <label class="control-label col-sm-1" name="name">Names:
+                </label>
+                <div class="col-sm-6" >
+                    <input type="text" class="form-control" placeholder="Names" name="name" ng-model="user.names">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" name="email">E-mail:
+                </label>
+                <div class="col-sm-6" >
+                    <input type="email" class="form-control" placeholder="email" name="email" ng-model="user.email"><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1" name="gender">Gender:
+                </label>
+                <div class="col-sm-4">
+                    <input type="radio" placeholder="gender" name="gender" ng-model="user.gender" value="male">male
+                </div>
+                <div class="col-sm-1">
+                    <input type="radio" placeholder="gender" name="gender" ng-model="user.gender" value="female">female
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1"
+                       name="username">Username: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="username" name="username" ng-model="user.username">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </div>
+            </div>
+            <!--<input type="submit" ng-click="update(user)" value="Save" />-->
+        </form>
+        <p>form = {{user }}</p>
+        <p>master = {{master}}</p>
+    </div>
+</div>
+
+</body>
+</html>

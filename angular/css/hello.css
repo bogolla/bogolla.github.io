@@ -1,0 +1,17 @@
+/* ng-repeat */
+.odd {
+    background-color: #004444;
+}
+.even {
+    background-color: #678CB1;
+}
+ .rangi {
+     color: #ffffff;
+ }
+
+input.ng-invalid {
+    border: 1px solid red;
+}
+input.ng-valid {
+    border: 1px solid green;
+}

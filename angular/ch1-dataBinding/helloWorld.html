@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+	<title>Angular js</title>
+    <script src="../lib/angular-1.4.2/angular.js"></script>
+    <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet"
+          href="../lib/bootstrap-3.3.5-dist/css/bootstrap.css">
+	<script src="helloModule.js"></script>
+</head>
+<body>
+<div class="container">
+    <div ng-controller="MyController">
+        <header class="page-header"><h1>Data Binding<h1></header>
+        <p>AngularJS creates live templates as a view. Views are interpolated when the view is evaluated with one or more variable substitu-
+            tions; the result is that the variables in our string are replaced with values.</p>
+        <p>Angular runs its own event loop to check if a value is dirty. A value is considered dirty if it has changed since the last time the event loop ran.
+            This is how Angular is able to track and respond to changes in the app. The event loop is called the $digest() loop</p>
+        <p>To denote internals and other built-in library functions, Angular uses the $ to prepend objects.</p>
+
+
+        <!-- to bind references in the views by an attribute on an object, rather than
+    the raw object itself. -->
+        <br><h4>{{ clock.now }}</h4><br>
+        <!--bind the “name” property to the input field using the ng-model directive on the containing model object ( $scope ).-->
+        <input type="text" ng-model="name" placeholder="Your Name">
+        <p>Hallo {{ name }}</p>
+
+    </div>
+</div>
+</body>
+</html>
