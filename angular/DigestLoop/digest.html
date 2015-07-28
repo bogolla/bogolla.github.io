@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular js</title>
+    <script
+            src="../lib/angular-1.4.2/angular.js"></script>
+    <script
+            src="../lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet"
+          href="../lib/bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/hello.css">
+</head>
+<body ng-controller="DemoController">
+<div class="container">
+    <header class="page-header">
+        <h1>The Digest Loop and $apply</h1>
+    </header>
+    <button ng-click="fn1()">$timeout</button>
+    <button ng-click="fn2()">$evalAsync</button>
+    <div>x={{x}}, y={{y}}</div>
+    <pre>{{log}}</pre>
+</div>
+</body>
+
+</html>
